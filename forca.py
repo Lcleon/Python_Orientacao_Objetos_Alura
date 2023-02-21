@@ -3,7 +3,7 @@ def jogar():
     print("***Bem vindo ao jogo da forca***")
     print("********************************")
 
-    palavra_secreta = "futebol".upper()
+    palavra_secreta = "FUTEBOL"
 
     enforcado = False
     acertou = False
@@ -12,7 +12,7 @@ def jogar():
     print("Tente acertar.")
 
     while (not enforcado and not acertou):
-        chute = input("Qual letra?").upper()
+        chute = input("Qual letra?").upper().strip()
         index = 0
         for letra in palavra_secreta:
             if (chute == letra):
