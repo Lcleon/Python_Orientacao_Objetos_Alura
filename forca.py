@@ -4,11 +4,13 @@ def jogar():
     print("********************************")
 
     palavra_secreta = "FUTEBOL"
+    palavras_acertadas = ["_","_","_","_","_","_","_"]
 
     enforcado = False
     acertou = False
 
     print(f"Olá, eu sou o PC e minha palavra secreta tem {len(palavra_secreta)} letras. ")
+    print(palavras_acertadas)
     print("Tente acertar.")
 
     while (not enforcado and not acertou):
@@ -16,10 +18,13 @@ def jogar():
         index = 0
         for letra in palavra_secreta:
             if (chute == letra):
-                print(f"Encontrei a letra {letra} na posição {index + 1}")
+                palavras_acertadas[index] = letra
+                letras_faltando = str(palavras_acertadas.count('_'))
+                print(f"Ainda faltam {letras_faltando} letras")
+
             index += 1
 
-        print("Jogando...")
+        print(palavras_acertadas)
 
     print("Fim de jogo")
 
